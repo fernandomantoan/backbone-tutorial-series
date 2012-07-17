@@ -12,4 +12,4 @@ The Part 1 of the article gives a simple introduction of the framework Backbone.
 
 This part is focused on introducing and explaining the Backbone.View class, showing practical samples and a full functional code using templates and events.
 
-**Permalink**:  N/A
+**Permalink**:  [http://fernandomantoan.com/javascript/serie-backbone-js-parte-2-view/](http://fernandomantoan.com/javascript/serie-backbone-js-parte-2-view/)
