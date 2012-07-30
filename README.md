@@ -43,4 +43,4 @@ The last part of the Backbone.js tutorial series shows how to build an applicati
 * Authentication
 * Twitter Bootstrap.
 
-** Permalink**: N/A
+**Permalink**: N/A
