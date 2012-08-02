@@ -12,15 +12,18 @@ Post.establish_connection(
     :database => "data.db"
 )
 
+# Shows the index.html page, which contains the Backbone.js code
 get '/' do
   File.read(File.join('public', 'index.html'))
 end
 
+# Get the latest post from the database
 get '/posts' do
     content_type :json
     Post.last.to_json
 end
 
+# Create a new post
 post '/posts' do
     data = JSON.parse request.body.read
 
@@ -31,6 +34,7 @@ post '/posts' do
     post.save
 end
 
+# Update an existing post
 put '/posts/:id' do
     data = JSON.parse request.body.read
 
@@ -41,6 +45,9 @@ put '/posts/:id' do
     post.save
 end
 
+# Remove an existing post
 delete '/posts/:id' do
     Post.destroy params[:id]
 end
+
+Post.connection.close
