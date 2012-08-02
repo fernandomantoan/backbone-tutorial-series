@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Backbone Tutorial Series Part 3 - Model</title>
+        <meta charset="UTF-8" />
+        <script src="lib/jquery-min.js"></script>
+        <script src="lib/underscore-min.js"></script>
+        <script src="lib/backbone-min.js"></script>
+        <script src="lib/mustache.js"></script>
+        <script src="js/models/PostModel.js"></script>
+        <script src="js/views/PostFormView.js"></script>
+        <script>
+            $(document).ready(function() {
+                var postView = new PostFormView();
+            });
+        </script>
+    </head>
+    <body>
+        <script type="text/template" id="post-form">
+            <h2>Adicionar Post</h2>
+            <p><label>Title: <input type="text" id="post-title" /></label></p>
+            <p><label>Text: <textarea id="post-text"></textarea></label></p>
+            <p><input type="submit" value="Salvar" /></p>
+        </script>
+    </body>
+</html>
