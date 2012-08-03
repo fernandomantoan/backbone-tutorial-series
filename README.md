@@ -6,19 +6,19 @@ This repository will store the code used in the Backbone.js tutorial series.
 
 The Part 1 of the article gives a simple introduction of the framework Backbone.js, showing a simple "Hello World" View.
 
-**Permalink**:  [http://fernandomantoan.com/javascript/serie-backbone-js-parte-1-introducao/](http://fernandomantoan.com/javascript/serie-backbone-js-parte-1-introducao/)
+**Permalink**: [http://fernandomantoan.com/javascript/serie-backbone-js-parte-1-introducao/](http://fernandomantoan.com/javascript/serie-backbone-js-parte-1-introducao/)
 
 ## Part 2
 
 This part is focused on introducing and explaining the Backbone.View class, showing practical samples and a full functional code using templates and events.
 
-**Permalink**:  [http://fernandomantoan.com/javascript/serie-backbone-js-parte-2-view/](http://fernandomantoan.com/javascript/serie-backbone-js-parte-2-view/)
+**Permalink**: [http://fernandomantoan.com/javascript/serie-backbone-js-parte-2-view/](http://fernandomantoan.com/javascript/serie-backbone-js-parte-2-view/)
 
 ## Part 3
 
 The Part 3 of the series shows how to use Backbone.Model, all of its functionality and an integration of the Model with the View created in Part 2. A simple Sinatra backend is written, to show how Backbone.Model uses a RESTful API with the Backbone.sync() methods to make persistence of data and syncronization.
 
-**Permalink**: N/A
+**Permalink**: [http://fernandomantoan.com/javascript/serie-backbone-js-parte-3-model/](http://fernandomantoan.com/javascript/serie-backbone-js-parte-3-model/)
 
 ## Part 4
 
