@@ -17,12 +17,13 @@ get '/' do
   File.read(File.join('public', 'index.html'))
 end
 
-# Get the all the posts from the database
+# Get all the posts from the database
 get '/posts' do
     content_type :json
     Post.all.to_json
 end
 
+# Get a post by id, from the database
 get 'posts/:id' do
     content_type :json
     post = Post.find params[:id]
