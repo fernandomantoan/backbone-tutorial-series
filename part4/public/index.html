@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Backbone Tutorial - Part 4 Collections</title>
+    </head>
+    <body>
+        <header>
+            <h1>Blog</h1>
+        </header>
+
+        <section id="content">
+        </section>
+
+        <script src="lib/jquery-min.js"></script>
+        <script src="lib/underscore-min.js"></script>
+        <script src="lib/backbone-min.js"></script>
+        <script src="lib/mustache.js"></script>
+        <script src="js/models/PostModel.js"></script>
+        <script src="js/models/PostList.js"></script>
+        <script src="js/views/PostView.js"></script>
+        <script src="js/views/AppView.js"></script>
+        <script>
+            $(function() {
+                var application = new AppView();
+            });
+        </script>
+
+        <!-- Templates -->
+        <script type="text/template" id="post-template">
+            <h2>{{title}}</h2>
+            <p>{{text}}</p>
+        </script>
+    </body>
+</html>
