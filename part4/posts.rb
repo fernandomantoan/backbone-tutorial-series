@@ -32,6 +32,7 @@ end
 
 # Create a new post
 post '/posts' do
+    content_type :json
     data = JSON.parse request.body.read
 
     post = Post.new
@@ -39,6 +40,7 @@ post '/posts' do
     post.text = data['text']
 
     post.save
+    post.to_json
 end
 
 # Update an existing post

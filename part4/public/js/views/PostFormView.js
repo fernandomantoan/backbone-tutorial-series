@@ -11,14 +11,9 @@ var PostFormView = Backbone.View.extend({
     },
 
     initialize: function(model) {
-        _.bindAll(this, 'render', 'savePost', 'goToIndex');
+        _.bindAll(this, 'render', 'savePost');
 
         this.template = $('#post-form').html();
-        this.model = new PostModel();
-
-        this.model.on("error", this.showError);
-        this.model.on("sync", this.goToIndex);
-        this.render();
     },
 
     render: function() {
@@ -28,11 +23,14 @@ var PostFormView = Backbone.View.extend({
         this.titleInput = this.$el.find('#post-title');
         this.textInput = this.$el.find('#post-text');
 
-        $('body').append(this.el);
+        this.hide();
     },
 
     savePost: function(e) {
         e.preventDefault();
+
+        this.model = new PostModel();
+        this.model.on("error", this.showError);
 
         var title = this.titleInput.val();
         var text = this.textInput.val();
@@ -42,15 +40,24 @@ var PostFormView = Backbone.View.extend({
             text: text
         });
 
-        if (this.model.isValid())
-            this.model.save();
+        if (this.model.isValid()) {
+            Posts.create(this.model, {wait: true});
+            this.hide();
+            Posts.sort();
+        }
+    },
+
+    hide: function() {
+        this.$el.hide();
+    },
+
+    show: function() {
+        this.titleInput.val('');
+        this.textInput.val('');
+        this.$el.toggle();
     },
 
     showError:function(model, error) {
         window.alert('Ocorreu um erro, motivo: ' + error);
     },
-
-    goToIndex: function() {
-        window.location = 'index.html';
-    }
 });
