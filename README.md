@@ -24,7 +24,7 @@ The Part 3 of the series shows how to use Backbone.Model, all of its functionali
 
 This part shows the Backbone.Collection class, and increments the simple blog developed through the series, showing how to build a list of the Posts, how to iterate and use Backbone.Collection with all the Array functionalities of Underscore.js. A new View is built to support the blog posts listing and some other resources are implemented, also the Sinatra backend is modified to add the Posts listing support.
 
-**Permalink**: N/A
+**Permalink**: [http://fernandomantoan.com/javascript/serie-backbone-js-parte-4-collection/](http://fernandomantoan.com/javascript/serie-backbone-js-parte-4-collection/)
 
 ## Part 5
 
