@@ -52,6 +52,7 @@ put '/posts/:id' do
     post.text = data['text']
 
     post.save
+    post.to_json
 end
 
 # Remove an existing post
