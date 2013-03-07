@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Backbone.js Tutorial Series Samples - Part 5</title>
+		<script type="text/javascript" src="../../libs/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../../libs/zepto.min.js"></script>
+		<script type="text/javascript" src="../../libs/underscore-min.js"></script>
+		<script type="text/javascript" src="../../libs/backbone-min_0.9.10.js"></script>
+		<script type="text/javascript" src="js/router.js"></script>
+		<script type="text/javascript" src="js/sync.js"></script>
+		<script type="text/javascript" src="js/events.js"></script>
+		<script type="text/javascript" src="js/utils.js"></script>
+	</head>
+	<body>
+		<section id="content">
+			<a href="#" onclick="router.navigate('add', {trigger: true});">Add</a> | 
+			<a href="#" onclick="router.navigate('help', {trigger: true});">Help</a> | 
+			<a href="#" onclick="router.navigate('posts/1', {trigger: true});">Post 1</a> |
+			<a href="#" onclick="router.navigate('posts/2/3', {trigger: true});">Posts 2 3</a> |
+			<a href="#" onclick="router.navigate('posts/4/5/6', {trigger: true});">Posts 4 5 6</a> |
+			<a href="#" onclick="router.navigate('posts/4/5/6', {trigger: true, replace: true});">Help no history</a>
+			<p>The file <strong>router.js</strong> shows how to use the Backbone.Router and Backbone.History components.</p>
+			<p>The file <strong>sync.js</strong> shows how to override the default Backbone.sync function.</p>
+			<p>The file <strong>events.js</strong> shows how to use the Events API from Backbone.</p>
+			<p>The file <strong>utils.js</strong> shows how to use Backbone.noConflict() and how to integrate jQuery in one Backbone installation and Zepto.js in another one.</p>
+			<p><small>Credits: Fernando Mantoan.</small></p>
+		</section>
+	</body>
+</html>
