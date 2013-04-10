@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Backbone.js Blog</title>
+	</head>
+	<body>
+		<script type="text/template" id="post-template">
+            <p>
+                <a href="#{{id}}" id="remove-button">Remover este Post</a>
+            </p>
+            <h2>{{title}}</h2>
+            <p>{{text}}</p>
+        </script>
+		<script type="text/template" id="post-form">
+			<h2>Adicionar Post</h2>
+			<p><label>Title: <input type="text" id="post-title" /></label></p>
+			<p><label>Text: <textarea id="post-text"></textarea></label></p>
+			<p><input type="submit" value="Salvar" /></p>
+        </script>
+		<script src="libs/js/jquery-min.js"></script>
+		<script src="libs/js/underscore-min.js"></script>
+		<script src="libs/js/backbone-min.js"></script>
+		<script src="js/models/post.js"></script>
+		<script src="js/collections/posts.js"></script>
+		<script src="js/views/posts/form.js"></script>
+		<script src="js/views/posts/list.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
