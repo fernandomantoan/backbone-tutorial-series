@@ -6,10 +6,27 @@ var AppRouter = Backbone.Router.extend({
 		"edit/:id": "editAction"
 	},
 	listAction: function() {
-		console.log("Liting posts...");
+
+		_.bindAll(this, 'addPost');
+
+		this.layout = new LayoutView();
+		this.layout.router = this;
+		this.layout.render();
+
+		Posts.bind('add', this.addPost);
+		Posts.fetch();
 	},
 	addAction: function() {
-		console.log("Adding post...");
+		var form = new PostFormView();
+		form.router = this;
+		form.render();
+		$('#main').append(form.$el);
+	},
+	addPost: function(post) {
+		 var view = new PostView({
+            model: post
+        });
+        this.layout.$el.append(view.render().el);
 	},
 	viewAction: function(id) {
 		console.log("Viewing post with id " + id + "...");

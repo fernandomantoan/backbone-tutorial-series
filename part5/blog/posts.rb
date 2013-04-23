@@ -17,6 +17,10 @@ get '/' do
   File.read(File.join('public', 'index.html'))
 end
 
+get '/add' do
+  File.read(File.join('public', 'index.html'))
+end
+
 # Get all the posts from the database
 get '/posts' do
     content_type :json
