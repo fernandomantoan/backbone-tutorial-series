@@ -4,7 +4,7 @@ var PostView = Backbone.View.extend({
     template: $('#post-template').html(),
 
     events: {
-        //"click .remove-button": "removePost"
+        "click .remove-button": "removePost"
     },
 
     initialize: function() {
@@ -21,7 +21,10 @@ var PostView = Backbone.View.extend({
         return this;
     },
 
-    removePost: function() {
-        this.model.destroy();
+    removePost: function(e) {
+        e.preventDefault();
+        if (window.confirm('Are you sure to remove this post?')) {
+            this.model.destroy();
+        }
     }
 });

@@ -14,6 +14,9 @@ var AppRouter = Backbone.Router.extend({
 		this.layout.render();
 
 		Posts.bind('add', this.addPost);
+		Posts.bind('reset', this.reset);
+		Posts.bind('sync', this.reset);
+		Posts.bind('destroy', this.destroy);
 		Posts.fetch();
 	},
 	addAction: function() {
@@ -33,6 +36,12 @@ var AppRouter = Backbone.Router.extend({
 	},
 	editAction: function(id) {
 		console.log("Editing post with id " + id + "...");
+	},
+	reset: function() {
+		console.log('resetou');
+	},
+	destroy: function() {
+		console.log('removeu');
 	}
 });
 
