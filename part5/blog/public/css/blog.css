@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, Helvetica, sans-serifs;
+}
+
+.site-header {
+    border-bottom: 1px #ccc solid;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h1, h2, h2 a {
+    color: #034C7C;
+}
+
+.toolbar a {
+    color: #999;
+}
+
+h2 {
+    float: left;
+    font-size: 28px;
+}
+
+.readed a {
+    color: #FF8500;
+}
+
+form {
+    margin-bottom: 10px;
+}
+
+.remove-button {
+    color: red;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 34px;
+    padding-left: 10px;
+}
+
+.post-content {
+    clear: both;
+}
+
+.clear {
+    clear: both;
+}

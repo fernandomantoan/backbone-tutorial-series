@@ -17,10 +17,6 @@ get '/' do
   File.read(File.join('public', 'index.html'))
 end
 
-get '/add' do
-  File.read(File.join('public', 'index.html'))
-end
-
 # Get all the posts from the database
 get '/posts' do
     content_type :json
@@ -28,7 +24,7 @@ get '/posts' do
 end
 
 # Get a post by id, from the database
-get 'posts/:id' do
+get '/posts/:id' do
     content_type :json
     post = Post.find params[:id]
     post.to_json
@@ -61,7 +57,9 @@ end
 
 # Remove an existing post
 delete '/posts/:id' do
+    post = Post.find params[:id]
     Post.destroy params[:id]
+    post.to_json
 end
 
 Post.connection.close
