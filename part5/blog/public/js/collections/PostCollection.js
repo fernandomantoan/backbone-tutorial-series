@@ -1,8 +1,8 @@
 var PostCollection = Backbone.Collection.extend({
-	model: PostModel,
+    model: PostModel,
     url: '/posts',
     comparator: function(post) {
-       -post.get('id');
+        -post.get('id');
     }
 });
 
