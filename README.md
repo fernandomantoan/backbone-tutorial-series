@@ -35,12 +35,12 @@ The Part 5 of the series is the last one introducing features and components of 
 ## Part 6
 This is the last part of the Backbone.js tutorial series, focusing in a deep practical experience on how to build an application from scratch, using good practices, other JS libraries and a PHP backend. Some topics covered:
 
-* Slim Framework
+* Laravel Framework
 * Models
 * Views
 * Underscore.js
 * Require.js
-* Authentication
+* JWT Authentication
 * Twitter Bootstrap.
 
 **Permalink**: N/A
